@@ -1,0 +1,5 @@
+pip install --upgrade rasa
+rasa -h
+rasa init
+rasa train
+rasa shell --debug

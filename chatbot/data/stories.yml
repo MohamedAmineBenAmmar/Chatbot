@@ -1,0 +1,36 @@
+# Here example of discussion scenarios
+# Pootential conversation flows
+
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  # Intent are things user can say to the assistant
+  # and are detectted by the NLU
+  - intent: greet
+  # Actions are things done by the chatbot
+  - action: utter_greet # Utters can be generated in the domain file
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye

@@ -1,0 +1,19 @@
+# Rasa specific
+__pycache__/
+.cache/
+logs/
+
+# Virtual environment
+venv/
+.env/
+
+# Compiled Python files
+*.pyc
+
+# IDE specific
+.vscode/
+.idea/
+
+# Miscellaneous
+*.pyc
+.DS_Store
